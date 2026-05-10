@@ -15,7 +15,12 @@ def get_age_group(age: int) -> str:
     return "senior"
 
 
-def diagnose(symptoms: list[str], age: int, gender: str) -> list[dict]:
+def localized(disease: dict, field: str, lang: str) -> str:
+    key = f"{field}_{lang}"
+    return disease.get(key) or disease.get(field, "")
+
+
+def diagnose(symptoms: list[str], age: int, gender: str, lang: str = "en") -> list[dict]:
     age_group = get_age_group(age)
     results = []
 
@@ -34,13 +39,13 @@ def diagnose(symptoms: list[str], age: int, gender: str) -> list[dict]:
 
         results.append({
             "id": disease["id"],
-            "name": disease["name"],
+            "name": localized(disease, "name", lang),
             "severity": disease["severity"],
             "confidence": round(confidence * 100, 1),
             "matched_symptoms": matched,
             "total_symptoms": len(disease["symptoms"]),
-            "explanation": disease["explanation"],
-            "treatment": disease["treatment"],
+            "explanation": localized(disease, "explanation", lang),
+            "treatment": localized(disease, "treatment", lang),
         })
 
     results.sort(key=lambda x: x["confidence"], reverse=True)

@@ -17,6 +17,13 @@ class DiagnoseRequest(BaseModel):
     symptoms: list[str] = Field(..., min_length=1)
     age: int = Field(..., ge=1, le=120)
     gender: str = Field(..., pattern="^(male|female|other)$")
+    lang: str = Field(default="en", pattern="^(en|am|om)$")
+
+
+class ReportRequest(BaseModel):
+    patient: dict
+    symptoms: list[str]
+    results: list[dict]
 
 
 @app.get("/api/symptoms")
@@ -28,18 +35,12 @@ def get_symptoms():
 def run_diagnosis(req: DiagnoseRequest):
     if not req.symptoms:
         raise HTTPException(status_code=400, detail="At least one symptom required")
-    results = diagnose(req.symptoms, req.age, req.gender)
+    results = diagnose(req.symptoms, req.age, req.gender, req.lang)
     return {
         "patient": {"age": req.age, "gender": req.gender},
         "symptoms": req.symptoms,
         "results": results,
     }
-
-
-class ReportRequest(BaseModel):
-    patient: dict
-    symptoms: list[str]
-    results: list[dict]
 
 
 @app.post("/api/report")
