@@ -1,0 +1,152 @@
+[
+  {
+    "id": "flu",
+    "name": "Influenza (Flu)",
+    "severity": "Moderate",
+    "symptoms": ["fever", "cough", "sore_throat", "runny_nose", "body_aches", "headache", "fatigue", "chills"],
+    "explanation": "A contagious respiratory illness caused by influenza viruses that infect the nose, throat, and lungs.",
+    "treatment": "Rest, fluids, antiviral medications if prescribed. OTC pain relievers for fever and aches.",
+    "age_risk": {"child": 1.2, "adult": 1.0, "senior": 1.3},
+    "gender_risk": {"male": 1.0, "female": 1.0}
+  },
+  {
+    "id": "common_cold",
+    "name": "Common Cold",
+    "severity": "Minor",
+    "symptoms": ["runny_nose", "sneezing", "sore_throat", "cough", "congestion", "mild_fever", "headache"],
+    "explanation": "A viral infection of the upper respiratory tract, usually caused by rhinoviruses.",
+    "treatment": "Rest, stay hydrated, OTC decongestants and antihistamines for symptom relief.",
+    "age_risk": {"child": 1.3, "adult": 1.0, "senior": 1.1},
+    "gender_risk": {"male": 1.0, "female": 1.0}
+  },
+  {
+    "id": "covid19",
+    "name": "COVID-19",
+    "severity": "Urgent",
+    "symptoms": ["fever", "cough", "shortness_of_breath", "fatigue", "loss_of_taste", "loss_of_smell", "body_aches", "headache", "sore_throat", "chills"],
+    "explanation": "A respiratory illness caused by the SARS-CoV-2 virus, ranging from mild to severe.",
+    "treatment": "Isolate, rest, fluids. Seek medical care if breathing difficulty occurs. Follow local health guidelines.",
+    "age_risk": {"child": 0.8, "adult": 1.0, "senior": 1.6},
+    "gender_risk": {"male": 1.2, "female": 1.0}
+  },
+  {
+    "id": "pneumonia",
+    "name": "Pneumonia",
+    "severity": "Urgent",
+    "symptoms": ["fever", "cough", "shortness_of_breath", "chest_pain", "fatigue", "chills", "sweating", "nausea"],
+    "explanation": "An infection that inflames the air sacs in one or both lungs, which may fill with fluid.",
+    "treatment": "Antibiotics (bacterial), antiviral or antifungal medications. Hospitalization may be required.",
+    "age_risk": {"child": 1.2, "adult": 1.0, "senior": 1.5},
+    "gender_risk": {"male": 1.1, "female": 1.0}
+  },
+  {
+    "id": "bronchitis",
+    "name": "Bronchitis",
+    "severity": "Moderate",
+    "symptoms": ["cough", "mucus", "fatigue", "shortness_of_breath", "chest_discomfort", "mild_fever", "chills"],
+    "explanation": "Inflammation of the bronchial tubes that carry air to and from the lungs.",
+    "treatment": "Rest, fluids, humidifier. Antibiotics only if bacterial. Cough suppressants may help.",
+    "age_risk": {"child": 1.1, "adult": 1.0, "senior": 1.2},
+    "gender_risk": {"male": 1.0, "female": 1.0}
+  },
+  {
+    "id": "gastroenteritis",
+    "name": "Gastroenteritis (Stomach Flu)",
+    "severity": "Moderate",
+    "symptoms": ["nausea", "vomiting", "diarrhea", "stomach_cramps", "fever", "headache", "fatigue"],
+    "explanation": "Inflammation of the stomach and intestines, typically caused by a viral or bacterial infection.",
+    "treatment": "Stay hydrated with clear fluids. BRAT diet. Seek care if symptoms persist over 3 days.",
+    "age_risk": {"child": 1.3, "adult": 1.0, "senior": 1.2},
+    "gender_risk": {"male": 1.0, "female": 1.0}
+  },
+  {
+    "id": "migraine",
+    "name": "Migraine",
+    "severity": "Moderate",
+    "symptoms": ["headache", "nausea", "vomiting", "sensitivity_to_light", "sensitivity_to_sound", "dizziness", "blurred_vision"],
+    "explanation": "A neurological condition causing intense, debilitating headaches often with nausea and light sensitivity.",
+    "treatment": "Rest in a dark quiet room. OTC pain relievers, triptans if prescribed. Identify and avoid triggers.",
+    "age_risk": {"child": 0.8, "adult": 1.0, "senior": 0.9},
+    "gender_risk": {"male": 0.7, "female": 1.3}
+  },
+  {
+    "id": "hypertension",
+    "name": "Hypertension (High Blood Pressure)",
+    "severity": "Urgent",
+    "symptoms": ["headache", "dizziness", "blurred_vision", "chest_pain", "shortness_of_breath", "nosebleed", "fatigue"],
+    "explanation": "A condition where blood pressure in the arteries is persistently elevated, increasing risk of heart disease.",
+    "treatment": "Lifestyle changes: low-sodium diet, exercise, no smoking. Medication as prescribed by doctor.",
+    "age_risk": {"child": 0.3, "adult": 1.0, "senior": 1.8},
+    "gender_risk": {"male": 1.2, "female": 1.0}
+  },
+  {
+    "id": "diabetes",
+    "name": "Type 2 Diabetes",
+    "severity": "Urgent",
+    "symptoms": ["frequent_urination", "excessive_thirst", "fatigue", "blurred_vision", "slow_healing", "weight_loss", "numbness"],
+    "explanation": "A chronic condition affecting how the body processes blood sugar (glucose).",
+    "treatment": "Diet control, exercise, blood sugar monitoring. Oral medications or insulin as prescribed.",
+    "age_risk": {"child": 0.4, "adult": 1.0, "senior": 1.6},
+    "gender_risk": {"male": 1.1, "female": 1.0}
+  },
+  {
+    "id": "anemia",
+    "name": "Anemia",
+    "severity": "Moderate",
+    "symptoms": ["fatigue", "weakness", "pale_skin", "shortness_of_breath", "dizziness", "headache", "cold_hands", "chest_pain"],
+    "explanation": "A condition where you lack enough healthy red blood cells to carry adequate oxygen to body tissues.",
+    "treatment": "Iron supplements, vitamin B12, dietary changes. Treat underlying cause.",
+    "age_risk": {"child": 1.1, "adult": 1.0, "senior": 1.2},
+    "gender_risk": {"male": 0.8, "female": 1.4}
+  },
+  {
+    "id": "appendicitis",
+    "name": "Appendicitis",
+    "severity": "Urgent",
+    "symptoms": ["stomach_cramps", "nausea", "vomiting", "fever", "loss_of_appetite", "diarrhea"],
+    "explanation": "Inflammation of the appendix causing severe abdominal pain, requiring immediate medical attention.",
+    "treatment": "Emergency surgery (appendectomy) is typically required. Do not delay seeking care.",
+    "age_risk": {"child": 1.2, "adult": 1.3, "senior": 0.9},
+    "gender_risk": {"male": 1.2, "female": 1.0}
+  },
+  {
+    "id": "urinary_tract_infection",
+    "name": "Urinary Tract Infection (UTI)",
+    "severity": "Moderate",
+    "symptoms": ["frequent_urination", "burning_urination", "pelvic_pain", "fever", "nausea", "fatigue", "back_pain"],
+    "explanation": "An infection in any part of the urinary system — kidneys, bladder, ureters, and urethra.",
+    "treatment": "Antibiotics as prescribed. Drink plenty of water. Cranberry juice may help prevent recurrence.",
+    "age_risk": {"child": 1.0, "adult": 1.0, "senior": 1.3},
+    "gender_risk": {"male": 0.5, "female": 1.5}
+  },
+  {
+    "id": "allergic_rhinitis",
+    "name": "Allergic Rhinitis (Hay Fever)",
+    "severity": "Minor",
+    "symptoms": ["sneezing", "runny_nose", "itchy_eyes", "congestion", "watery_eyes", "cough", "fatigue"],
+    "explanation": "An allergic response causing cold-like symptoms triggered by allergens like pollen, dust, or pet dander.",
+    "treatment": "Antihistamines, nasal corticosteroids, avoid triggers. Allergy shots for long-term relief.",
+    "age_risk": {"child": 1.2, "adult": 1.0, "senior": 0.9},
+    "gender_risk": {"male": 1.0, "female": 1.0}
+  },
+  {
+    "id": "asthma",
+    "name": "Asthma",
+    "severity": "Moderate",
+    "symptoms": ["shortness_of_breath", "wheezing", "cough", "chest_tightness", "fatigue", "difficulty_breathing"],
+    "explanation": "A condition where airways narrow and swell, producing extra mucus and making breathing difficult.",
+    "treatment": "Inhalers (bronchodilators, corticosteroids). Avoid triggers. Follow asthma action plan.",
+    "age_risk": {"child": 1.4, "adult": 1.0, "senior": 1.1},
+    "gender_risk": {"male": 1.1, "female": 1.0}
+  },
+  {
+    "id": "depression",
+    "name": "Depression",
+    "severity": "Moderate",
+    "symptoms": ["fatigue", "loss_of_appetite", "sleep_problems", "sadness", "loss_of_interest", "difficulty_concentrating", "weight_loss"],
+    "explanation": "A mood disorder causing persistent feelings of sadness and loss of interest affecting daily life.",
+    "treatment": "Therapy (CBT), antidepressants if prescribed, exercise, social support. Seek professional help.",
+    "age_risk": {"child": 0.7, "adult": 1.0, "senior": 1.1},
+    "gender_risk": {"male": 0.8, "female": 1.3}
+  }
+]
