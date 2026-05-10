@@ -36,6 +36,26 @@ def run_diagnosis(req: DiagnoseRequest):
     }
 
 
+class ReportRequest(BaseModel):
+    patient: dict
+    symptoms: list[str]
+    results: list[dict]
+
+
+@app.post("/api/report")
+def generate_report(req: ReportRequest):
+    from datetime import datetime
+    return {
+        "report": {
+            "generated_at": datetime.utcnow().isoformat() + "Z",
+            "patient": req.patient,
+            "symptoms": req.symptoms,
+            "top_diagnosis": req.results[0] if req.results else None,
+            "all_results": req.results,
+        }
+    }
+
+
 @app.get("/health")
 def health():
     return {"status": "ok"}
